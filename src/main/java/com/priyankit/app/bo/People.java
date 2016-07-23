@@ -1,3 +1,4 @@
+
 package com.priyankit.app.bo;
 
 public class People {

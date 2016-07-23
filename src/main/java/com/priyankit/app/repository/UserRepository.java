@@ -1,3 +1,4 @@
+
 package com.priyankit.app.repository;
 
 import org.springframework.data.repository.CrudRepository;

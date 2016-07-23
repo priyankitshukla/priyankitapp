@@ -1,3 +1,4 @@
+
 package com.priyankit.app.model;
 
 import javax.persistence.Entity;
