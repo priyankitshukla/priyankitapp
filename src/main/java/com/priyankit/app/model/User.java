@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private String id;
+  private Integer id;
   @Column(nullable = false)
   private String username;
   @Column(nullable = false)
@@ -29,13 +29,6 @@ public class User {
     this.setPassword(password);
     this.setRole(role);
     
-  }
-  public String getId() {
-    return id;
-  }
-  
-  public void setId(String id) {
-    this.id = id;
   }
   
   public String getUsername() {
@@ -56,15 +49,14 @@ public class User {
   public void setRole(int role) {
     this.role = role;
   }
+
+public Integer getId() {
+	return id;
+}
+
+public void setId(Integer id) {
+	this.id = id;
+}
   
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + "'" +
-                ", username='" + username + "'" +
-                ", password='" + password + "'" +
-                ", role='" + role + "'" +
-                '}';
-    }
-  
+   
 }
