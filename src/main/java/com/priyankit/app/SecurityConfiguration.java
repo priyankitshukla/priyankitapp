@@ -14,8 +14,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	  @Autowired
 	  UserDetailsService userDS;
-	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
+	
+	  @Autowired
+	  public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
 		/*authenticationMgr.inMemoryAuthentication()
 			.withUser("root")
 			.password("root")
@@ -28,10 +29,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/welcome").access("hasRole('ROLE_USER')")
+			.antMatchers("/index").access("hasRole('ROLE_USER')")
 			.and()
 				.formLogin().loginPage("/login")
-				.defaultSuccessUrl("/welcome")
+				.defaultSuccessUrl("/index")
 				.failureUrl("/loginPage?error")
 				.usernameParameter("username").passwordParameter("password")				
 			.and().logout().logoutSuccessUrl("/loginPage?logout"); 
