@@ -19,7 +19,7 @@ public class SwaggerController {
 
 	@ApiOperation(value = "getGreeting", nickname = "getGreeting")
 	@ApiImplicitParams({
-        @ApiImplicitParam(name = "name", value = "User's name", required = false, dataType = "string", paramType = "query", defaultValue="Niklas")
+        @ApiImplicitParam(name = "name", value = "User's name", required = false, dataType = "string", paramType = "query", defaultValue="Priyankit")
       })
 	@ApiResponses(value = { 
             @ApiResponse(code = 200, message = "Success", response = SwaggerController.class),
